@@ -15,6 +15,14 @@ export default function Contact(){
     setSent(true)
   }
 
+  // Build a WhatsApp deep link with a prefilled message using form fields if present.
+  const whatsappNumber = '918513813487' // Use international format without + or spaces
+  const baseWaUrl = `https://wa.me/${whatsappNumber}`
+  const waMessage = form.name || form.email || form.message ?
+    `Hello, my name is ${form.name || '(name)'}. My email is ${form.email || '(email)'}. I would like to inquire: ${form.message || '(your message here)'}` :
+    'Hello! I would like to know more about your Sanskrit courses.'
+  const waLink = `${baseWaUrl}?text=${encodeURIComponent(waMessage)}`
+
   return (
     <div>
       <section className="card" style={{background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)'}}>
@@ -36,10 +44,19 @@ export default function Contact(){
       <section className="card">
         <h3>🌐 Social Media</h3>
         <div style={{display: 'flex', gap: '16px', flexWrap: 'wrap'}}>
-          <a href="#" style={{padding: '10px 20px', background: '#25D366', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold'}}>💬 WhatsApp</a>
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{padding: '10px 20px', background: '#25D366', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold'}}
+            title="Chat on WhatsApp"
+          >💬 WhatsApp</a>
           <a href="#" style={{padding: '10px 20px', background: '#E4405F', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold'}}>📸 Instagram</a>
           <a href="#" style={{padding: '10px 20px', background: '#1877F2', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold'}}>👍 Facebook</a>
         </div>
+        <p style={{marginTop:'12px', fontSize:'0.85rem', color:'#555'}}>
+          Tip: Fill in your name/email/message below first and then click WhatsApp to send a prefilled inquiry.
+        </p>
       </section>
 
       <section className="card">
@@ -59,8 +76,14 @@ export default function Contact(){
             <label>Message
               <textarea name="message" value={form.message} onChange={handleChange} rows={5} required placeholder="Tell me about your interest in Sanskrit..." />
             </label>
-            <div style={{marginTop:16}}>
+            <div style={{display:'flex', gap:'12px', flexWrap:'wrap', marginTop:16}}>
               <button type="submit">📤 Send Message</button>
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{background:'#25D366', color:'#fff', padding:'12px 20px', borderRadius:'8px', fontWeight:'600', textDecoration:'none'}}
+              >💬 WhatsApp Direct</a>
             </div>
           </form>
         )}
