@@ -26,7 +26,7 @@ export default function Courses(){
       <section className="card">
         <h2>📚 Courses Offered</h2>
         <p>We offer structured courses from basic to advanced levels with personalized attention.</p>
-        <p style={{fontSize:'0.9rem', color:'#555'}}>Click a course to view detailed syllabus modules. Replace placeholder syllabus data in <code>src/data/syllabus.js</code> with the extracted PDF content.</p>
+        <p style={{fontSize:'0.9rem', color:'#555'}}>Click a course to view detailed syllabus modules. </p>
       </section>
 
       <section className="grid">
