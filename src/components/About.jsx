@@ -5,7 +5,7 @@ export default function About(){
     <div>
       <section className="card" style={{background: 'linear-gradient(135deg, #FFE5D9 0%, #FFD1BA 100%)'}}>
         <h2>👤 About Me</h2>
-        <p style={{fontSize: '1.1rem'}}>Namaste! 🙏 I am a passionate Sanskrit teacher with several years of experience teaching students worldwide.</p>
+        <p style={{fontSize: '1.1rem'}}>Namaste! 🙏 I am Dr. Rahul Maity a passionate Sanskrit teacher with several years of experience teaching students worldwide.</p>
         <p style={{fontSize: '1.1rem'}}>My mission is to spread Indian culture and make Sanskrit accessible, enjoyable, and meaningful for everyone.</p>
       </section>
 
