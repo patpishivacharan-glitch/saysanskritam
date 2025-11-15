@@ -17,7 +17,7 @@ export default function Slokas(){
       {sample.slokas.map(s => (
         <article key={s.id} className="card" style={{borderTop: `5px solid ${categoryColors[s.category] || '#FF6B35'}`}}>
           <div style={{display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px'}}>
-            <span style={{fontSize: '3rem'}}>{s.emoji}</span>
+            <span style={{fontSize: '5rem'}}>{s.emoji}</span>
             <span style={{background: categoryColors[s.category] || '#FF6B35', color: '#fff', padding: '4px 12px', borderRadius: '12px', fontSize: '0.85rem', fontWeight: 'bold'}}>{s.category}</span>
           </div>
           <h3 style={{fontSize: '1.5rem', color: '#C1121F', fontStyle: 'italic'}}>{s.text}</h3>
