@@ -30,7 +30,7 @@ A React-based website for teaching Sanskrit and promoting Indian culture.
 
 ```bash
 # Clone the repository
-git clone https://github.com/shpatpi_microsoft/saysanskritam.git
+git clone https://github.com/patpishivacharan-glitch/saysanskritam.git
 cd saysanskritam
 
 # Install dependencies

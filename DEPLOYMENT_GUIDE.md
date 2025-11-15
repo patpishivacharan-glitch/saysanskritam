@@ -11,7 +11,7 @@
    - Sign up at: https://portal.azure.com
 
 3. **GitHub Account**
-   - Your repo: https://github.com/shpatpi_microsoft/saysanskritam
+   - Your repo: https://github.com/patpishivacharan-glitch/saysanskritam
 
 ---
 
@@ -35,7 +35,7 @@ git commit -m "Initial commit: Sanskrit teaching website"
 
 ```powershell
 git branch -M main
-git remote add origin https://github.com/shpatpi_microsoft/saysanskritam.git
+git remote add origin https://github.com/patpishivacharan-glitch/saysanskritam.git
 git push -u origin main
 ```
 
@@ -81,7 +81,7 @@ git push -u origin main
 ## Part 3: Configure GitHub Actions
 
 ### Step 1: Add GitHub Secrets
-1. Go to: https://github.com/shpatpi_microsoft/saysanskritam
+1. Go to: https://github.com/patpishivacharan-glitch/saysanskritam
 2. Click **Settings** → **Secrets and variables** → **Actions**
 3. Click **"New repository secret"**
 
