@@ -29,7 +29,7 @@ export default function Contact(){
         </section>
         <section className="card">
           <h3>📱 Phone</h3>
-          <p>+91-XXXXXXXXXX</p>
+          <p>+91-8513813487</p>
         </section>
       </div>
 
