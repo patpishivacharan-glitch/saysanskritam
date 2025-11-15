@@ -3,15 +3,33 @@ import React, {useState} from 'react'
 export default function Inquiry(){
   const [form, setForm] = useState({name:'',email:'',question:''})
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(null)
 
   function handleChange(e){
     setForm({...form,[e.target.name]: e.target.value})
   }
 
-  function handleSubmit(e){
+  async function handleSubmit(e){
     e.preventDefault()
-    console.log('Session inquiry', form)
-    setSent(true)
+    setSending(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      })
+      const data = await res.json()
+      if(!res.ok || !data.ok){
+        throw new Error(data.error || 'Failed to send inquiry')
+      }
+      setSent(true)
+    } catch (err){
+      setError(err.message)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -31,16 +49,17 @@ export default function Inquiry(){
         ) : (
           <form onSubmit={handleSubmit}>
             <label>Name
-              <input name="name" value={form.name} onChange={handleChange} required placeholder="Your name" />
+              <input name="name" value={form.name} onChange={handleChange} required placeholder="Your name" disabled={sending} />
             </label>
             <label>Email
-              <input name="email" type="email" value={form.email} onChange={handleChange} required placeholder="your.email@example.com" />
+              <input name="email" type="email" value={form.email} onChange={handleChange} required placeholder="your.email@example.com" disabled={sending} />
             </label>
             <label>Question / Message
-              <textarea name="question" value={form.question} onChange={handleChange} rows={5} required placeholder="Tell me what you'd like to learn or ask any questions..." />
+              <textarea name="question" value={form.question} onChange={handleChange} rows={5} required placeholder="Tell me what you'd like to learn or ask any questions..." disabled={sending} />
             </label>
+            {error && <p style={{color:'#C1121F', fontSize:'0.9rem'}}>{error}</p>}
             <div style={{marginTop:16}}>
-              <button type="submit">🚀 Submit Inquiry</button>
+              <button type="submit" disabled={sending}>{sending ? 'Sending…' : '🚀 Submit Inquiry'}</button>
             </div>
           </form>
         )}
