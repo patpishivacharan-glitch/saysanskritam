@@ -33,9 +33,9 @@ const sample = {
     }
   ],
   testimonials: [
-    { id:1, name: 'Srujana Aouk', text: 'Wonderful teacher — clear explanations and engaging lessons. I learned so much!', rating: 5, emoji: '⭐' },
-    { id:2, name: 'Swarith Patpi', text: 'The course structure is excellent. Highly recommend for anyone interested in Sanskrit.', rating: 5, emoji: '⭐' },
-    { id:3, name: 'Samvedh Patpi', text: 'Cultural insights combined with language learning make this unique and valuable.', rating: 5, emoji: '⭐' }
+    { id:1, name: 'Srujana Aouk', text: 'Wonderful teacher — clear explanations and engaging lessons. I learned so much!', rating: 5, emoji: '⭐', photo: '/testimonials/srujana.jpg' },
+    { id:2, name: 'Swarith Patpi', text: 'The course structure is excellent. Highly recommend for anyone interested in Sanskrit.', rating: 5, emoji: '⭐', photo: '/testimonials/swarith.jpg' },
+    { id:3, name: 'Samvedh Patpi', text: 'Cultural insights combined with language learning make this unique and valuable.', rating: 5, emoji: '⭐', photo: '/testimonials/samvedh.jpg' }
   ]
 }
 
