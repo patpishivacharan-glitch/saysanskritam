@@ -79,6 +79,8 @@ body {
   display: flex;
   gap: 8px;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 900px;
 }
 
 .nav-links a {
@@ -88,6 +90,7 @@ body {
   border-radius: 6px;
   transition: all 0.3s ease;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .nav-links a:hover {

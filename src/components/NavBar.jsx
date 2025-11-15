@@ -24,7 +24,7 @@ export default function NavBar() {
             {mobileMenuOpen ? '✕' : '☰'}
           </button>
 
-          <div className="nav-links">
+          <div className="nav-links nav-links-full">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/courses">Courses</Link>
@@ -32,6 +32,12 @@ export default function NavBar() {
             <Link to="/slokas">Slokas</Link>
             <Link to="/posters">Posters</Link>
             <Link to="/testimonials">Reviews</Link>
+            <Link to="/offerings">Offerings</Link>
+            <Link to="/inquiry">Book Session</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link to="/resources">Resources</Link>
+            <Link to="/multimedia">Multimedia</Link>
+            <Link to="/newsletter">Newsletter</Link>
             <Link to="/contact">Contact</Link>
           </div>
         </div>
