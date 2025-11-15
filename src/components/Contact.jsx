@@ -33,7 +33,7 @@ export default function Contact(){
       <div className="grid">
         <section className="card">
           <h3>📧 Email</h3>
-          <p><a href="mailto:info@saysanskritam.com">info@saysanskritam.com</a></p>
+          <p><a href="mailto:saysanskritam@gmail.com ">saysanskritam@gmail.com</a></p>
         </section>
         <section className="card">
           <h3>📱 Phone</h3>
